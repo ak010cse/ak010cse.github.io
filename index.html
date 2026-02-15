@@ -4,165 +4,219 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Arvind Kumar | Senior Android & iOS Developer | 6.7+ Years</title>
+<title>Arvind Kumar | Senior Android Engineer | 6+ Years</title>
 
-<meta name="description" content="Senior Android & iOS Developer with 6.7+ years of experience in Kotlin, Jetpack Compose, MVVM, Clean Architecture, and Swift. Delivered production apps on Play Store.">
-<meta name="keywords" content="Arvind Kumar, Android Developer, Senior Android Developer, Kotlin Developer, Jetpack Compose, MVVM, iOS Developer, Swift Developer">
+<meta name="description" content="Senior Android Engineer with 6+ years experience. Worked on 25M+ user app at EaseMyTrip. Expert in Kotlin, MVVM, Clean Architecture, Jetpack Compose.">
+<meta name="keywords" content="Arvind Kumar Android Developer, Senior Android Engineer, Kotlin Developer, MVVM, Jetpack Compose, Clean Architecture">
 <meta name="author" content="Arvind Kumar">
-
-<!-- Open Graph (LinkedIn Preview) -->
-<meta property="og:title" content="Arvind Kumar | Senior Mobile Developer">
-<meta property="og:description" content="6.7+ Years | Android & iOS Developer | Kotlin | MVVM | Clean Architecture">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://ak010cse.github.io/">
-
-<link rel="icon" href="favicon.ico">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+<style>
+
+:root{
+  --primary:#22c55e;
+  --bg:#0f172a;
+  --card:#1e293b;
+  --text:#ffffff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:var(--bg);color:var(--text);scroll-behavior:smooth;}
+
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  background:rgba(15,23,42,0.85);
+  backdrop-filter:blur(10px);
+  padding:15px 10%;
+  display:flex;
+  justify-content:space-between;
+  z-index:1000;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  transition:.3s;
+}
+nav a:hover{color:var(--primary);}
+
+section{
+  padding:100px 10%;
+}
+
+h1{font-size:48px;}
+.highlight{color:var(--primary);}
+.btn{
+  display:inline-block;
+  padding:12px 30px;
+  background:var(--primary);
+  color:black;
+  border-radius:30px;
+  font-weight:600;
+  text-decoration:none;
+  margin-top:20px;
+  transition:.3s;
+}
+.btn:hover{transform:scale(1.05);}
+
+.card{
+  background:var(--card);
+  padding:25px;
+  border-radius:15px;
+  transition:.3s;
+}
+.card:hover{transform:translateY(-8px);}
+
+.grid{
+  display:grid;
+  gap:25px;
+}
+.grid-3{
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+}
+
+.fade{opacity:0;transform:translateY(30px);transition:1s;}
+.fade.show{opacity:1;transform:translateY(0);}
+
+@media(max-width:768px){
+  h1{font-size:32px;}
+  nav{padding:15px 5%;}
+  section{padding:80px 5%;}
+}
+
+</style>
 </head>
 
 <body>
 
 <nav>
-  <div><strong>Arvind Kumar</strong></div>
+  <strong>Arvind Kumar</strong>
   <div>
     <a href="#about">About</a>
+    <a href="#impact">Impact</a>
+    <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <!-- HERO -->
-<section id="home" class="fade">
-  <h1>Hi, I'm <span class="highlight">Arvind Kumar</span></h1>
-  <h2 id="typing"></h2>
+<section class="fade">
+  <h1>Senior <span class="highlight">Android Engineer</span></h1>
+  <p>6+ Years Experience | 25M+ Users | Performance & Architecture Focused</p>
   <a href="resume.pdf" class="btn" download>Download Resume</a>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="fade">
-  <h2 class="highlight">About Me</h2>
+  <h2 class="highlight">Professional Summary</h2>
   <div class="card">
-    6.7+ years experienced Mobile Developer specializing in Android (Kotlin, Jetpack, MVVM) and iOS (Swift).
-    Delivered production-level apps with millions of downloads and enterprise-grade architecture.
+    Senior Android Developer with 6+ years of experience building high-scale production applications.
+    Currently contributing to EaseMyTrip (25M+ users), improving performance, reducing crashes,
+    and developing scalable architecture using Kotlin, MVVM, and Clean Architecture.
   </div>
+</section>
+
+<!-- IMPACT -->
+<section id="impact" class="fade">
+  <h2 class="highlight">Career Impact</h2>
+  <div class="grid grid-3">
+
+    <div class="card">
+      <h3>📈 25M+ Users</h3>
+      <p>Working on large-scale consumer travel platform at EaseMyTrip.</p>
+    </div>
+
+    <div class="card">
+      <h3>⚡ 20% Faster Booking Flow</h3>
+      <p>Reduced redundant API calls improving screen load performance.</p>
+    </div>
+
+    <div class="card">
+      <h3>🛡 Crash & ANR Reduction</h3>
+      <p>Improved stability via Firebase Crashlytics & Sentry monitoring.</p>
+    </div>
+
+    <div class="card">
+      <h3>🚀 40K+ Downloads</h3>
+      <p>Built Android application from scratch and scaled to 40K+ downloads.</p>
+    </div>
+
+    <div class="card">
+      <h3>🏗 Clean Architecture</h3>
+      <p>Expert in MVVM, modularization, reusable components.</p>
+    </div>
+
+    <div class="card">
+      <h3>💳 Payment Integrations</h3>
+      <p>Integrated Razorpay, PayPal & handled Play Store production releases.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="fade">
+  <h2 class="highlight">Experience</h2>
+
+  <div class="card">
+    <h3>EaseMyTrip — Android Engineer (Dec 2023 – Present)</h3>
+    <p>Large-scale travel application across Flights, Hotels, Cabs, Metro & Activities modules.</p>
+  </div>
+
+  <br>
+
+  <div class="card">
+    <h3>Chetu Inc. — Android Engineer (May 2022 – Oct 2023)</h3>
+    <p>Built Android application from scratch using MVVM, Clean Architecture, Room & RxJava.</p>
+  </div>
+
+  <br>
+
+  <div class="card">
+    <h3>Onqanet Technologies — Android Developer (2019 – 2022)</h3>
+    <p>Developed & maintained multiple live apps with 25K+ active users.</p>
+  </div>
+
 </section>
 
 <!-- SKILLS -->
 <section id="skills" class="fade">
-  <h2 class="highlight">Technical Skills</h2>
-
-  <div class="skill">
-    Android / Kotlin
-    <div class="progress"><div class="bar" data-width="90%"></div></div>
-  </div>
-
-  <div class="skill">
-    Jetpack Compose
-    <div class="progress"><div class="bar" data-width="85%"></div></div>
-  </div>
-
-  <div class="skill">
-    MVVM / Clean Architecture
-    <div class="progress"><div class="bar" data-width="88%"></div></div>
-  </div>
-
-  <div class="skill">
-    iOS / Swift
-    <div class="progress"><div class="bar" data-width="80%"></div></div>
-  </div>
-
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="fade">
-  <h2 class="highlight">Live Production Apps</h2>
-
-  <div class="grid grid-3">
-
-    <div class="card">
-      <h3>EaseMyTrip</h3>
-      <a href="https://play.google.com/store/apps/details?id=com.easemytrip.android" target="_blank">View App</a>
-    </div>
-
-    <div class="card">
-      <h3>Fision</h3>
-      <a href="https://play.google.com/store/apps/details?id=com.hotwirecommunications.fision" target="_blank">View App</a>
-    </div>
-
-    <div class="card">
-      <h3>Flipspot</h3>
-      <a href="https://play.google.com/store/apps/details?id=com.flipspot" target="_blank">View App</a>
-    </div>
-
-    <div class="card">
-      <h3>Royal Botanica</h3>
-      <a href="https://play.google.com/store/apps/details?id=royalbotanica.in" target="_blank">View App</a>
-    </div>
-
-    <div class="card">
-      <h3>Just Opal</h3>
-      <a href="https://play.google.com/store/apps/details?id=justopal.com.au" target="_blank">View App</a>
-    </div>
-
-    <div class="card">
-      <h3>The Thirty Three</h3>
-      <a href="https://play.google.com/store/apps/details?id=thethirtythree.in" target="_blank">View App</a>
-    </div>
-
+  <h2 class="highlight">Technical Stack</h2>
+  <div class="card">
+    Kotlin • Java • Android SDK • Jetpack Compose • MVVM • Clean Architecture •
+    Coroutines • Flow • Room • Retrofit • OkHttp • Hilt • WorkManager •
+    Firebase Crashlytics • Analytics • REST APIs • CI/CD • GitHub Actions
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="fade">
-  <h2 class="highlight">Let's Connect</h2>
+  <h2 class="highlight">Contact</h2>
   <div class="card">
-    📧 your-email@gmail.com <br><br>
-    🔗 LinkedIn <br>
-    🔗 GitHub
+    📧 arvindlink05@gmail.com <br>
+    📍 Noida, India <br>
+    🔗 <a href="https://github.com/ak010cse" target="_blank">GitHub</a>
   </div>
 </section>
 
+<footer style="text-align:center;padding:30px;">
+  © 2026 Arvind Kumar | Senior Android Engineer
+</footer>
+
 <script>
-
-/* Typing Effect */
-const text = ["Senior Android Developer", "iOS Developer", "MVVM & Clean Architecture Expert"];
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
-(function type(){
-  if(count === text.length) count = 0;
-  currentText = text[count];
-  letter = currentText.slice(0, ++index);
-  document.getElementById("typing").textContent = letter;
-  if(letter.length === currentText.length){
-    count++;
-    index = 0;
-    setTimeout(type, 1500);
-  } else {
-    setTimeout(type, 80);
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+  if(entry.isIntersecting){
+    entry.target.classList.add("show");
   }
-})();
-
-/* Fade + Skill Animation */
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-      if(entry.target.id === "skills"){
-        document.querySelectorAll(".bar").forEach(bar=>{
-          bar.style.width = bar.dataset.width;
-        });
-      }
-    }
-  });
+ });
 });
-
 document.querySelectorAll(".fade").forEach(el=>observer.observe(el));
-
 </script>
 
 </body>
