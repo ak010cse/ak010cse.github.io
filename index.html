@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Arvind Kumar | Senior Android Engineer</title>
 
-<meta name="description" content="Senior Android Engineer with 6+ years experience. Worked on 25M+ user app at EaseMyTrip. Expert in Kotlin, MVVM, Clean Architecture, Jetpack Compose.">
+<meta name="description" content="Senior Android Engineer with 6+ years experience. Worked on 25M+ user app at EaseMyTrip. Expert in Kotlin, MVVM, Clean Architecture.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -36,39 +36,61 @@ body{
   margin:auto;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
+
 nav{
   background:#0b1220;
-  padding:12px 0;
+  padding:14px 0;
   position:sticky;
   top:0;
   z-index:1000;
 }
 
-nav .container{
+.nav-container{
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
 
-nav a{
-  color:white;
-  text-decoration:none;
-  margin-left:18px;
-  font-size:14px;
+.logo{
+  font-weight:600;
+  font-size:16px;
 }
 
-nav a:hover{
+.nav-links{
+  display:flex;
+  gap:22px;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
   color:var(--primary);
 }
 
-/* SECTIONS */
+.menu-toggle{
+  display:none;
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* ================= SECTIONS ================= */
+
 section{
   padding:50px 0;
 }
 
+.hero{
+  padding:60px 0 40px 0;
+}
+
 h1{
-  font-size:38px;
+  font-size:36px;
   margin-bottom:8px;
 }
 
@@ -79,66 +101,149 @@ h2{
 }
 
 p{
-  font-size:15px;
+  font-size:14px;
 }
 
-/* HERO */
-.hero{
-  padding:60px 0 40px 0;
-}
+/* ================= BUTTON ================= */
 
-/* BUTTON */
 .btn{
   display:inline-block;
-  padding:10px 22px;
+  padding:9px 20px;
   background:var(--primary);
   color:black;
   border-radius:25px;
   text-decoration:none;
   font-weight:600;
   margin-top:15px;
-  font-size:14px;
+  font-size:13px;
+  transition:0.3s;
 }
 
-/* CARD */
+.btn:hover{
+  background:#1faa52;
+}
+
+/* ================= CARD ================= */
+
 .card{
   background:var(--card);
   padding:18px;
-  border-radius:8px;
+  border-radius:10px;
   margin-bottom:15px;
+}
+
+/* ================= PROJECTS ================= */
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.project-card{
+  background:var(--card);
+  padding:20px;
+  border-radius:12px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-height:170px;
+  transition:0.3s ease;
+}
+
+.project-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 4px 15px rgba(34,197,94,0.15);
+}
+
+.project-card h3{
+  margin-bottom:8px;
+}
+
+.project-card p{
+  margin-bottom:15px;
+  font-size:13px;
+}
+
+.project-btn{
+  align-self:flex-start;
+  padding:6px 14px;
+  background:var(--primary);
+  color:black;
+  text-decoration:none;
+  font-size:12px;
+  border-radius:20px;
+  font-weight:600;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-card{
+  background:var(--card);
+  padding:22px;
+  border-radius:12px;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  max-width:450px;
+}
+
+.contact-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  color:var(--text);
+  padding:8px 10px;
+  border-radius:8px;
+  transition:0.3s;
   font-size:14px;
 }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:18px;
+.contact-item:hover{
+  background:rgba(34,197,94,0.1);
+  color:var(--primary);
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 footer{
   text-align:center;
   padding:15px;
   background:#0b1220;
-  font-size:13px;
+  font-size:12px;
 }
 
-/* 🔥 MOBILE FIX */
+/* ================= MOBILE ================= */
+
 @media(max-width:768px){
 
-  nav .container{
-    flex-direction:column;
-    align-items:center;
+  .menu-toggle{
+    display:block;
   }
 
-  nav a{
-    margin:8px 8px;
-    font-size:13px;
+  .nav-links{
+    position:absolute;
+    top:60px;
+    right:0;
+    width:100%;
+    background:#0b1220;
+    flex-direction:column;
+    align-items:center;
+    padding:20px 0;
+    display:none;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .nav-links a{
+    padding:10px 0;
   }
 
   h1{
-    font-size:26px;
+    font-size:24px;
   }
 
   section{
@@ -149,40 +254,6 @@ footer{
     padding:40px 0 30px 0;
   }
 
-  .container{
-    width:92%;
-  }
-
-}
-.contact-card{
-  background:var(--card);
-  padding:25px;
-  border-radius:12px;
-  display:flex;
-  flex-direction:column;
-  gap:18px;
-  max-width:500px;
-}
-
-.contact-item{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  text-decoration:none;
-  color:var(--text);
-  font-size:15px;
-  padding:10px 12px;
-  border-radius:8px;
-  transition:0.3s ease;
-}
-
-.contact-item:hover{
-  background:rgba(34,197,94,0.1);
-  color:var(--primary);
-}
-
-.icon{
-  font-size:18px;
 }
 </style>
 </head>
@@ -191,18 +262,19 @@ footer{
 
 <!-- NAVBAR -->
 <nav>
-  <div class="container">
-    <a href="#home" style="color:white;text-decoration:none;">
-  <strong>Arvind Kumar</strong>
-</a>
-   <div>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#impact">Impact</a>
-  <a href="#projects">Projects</a>
-  <a href="#experience">Experience</a>
-  <a href="#contact">Contact</a>
-</div>
+  <div class="container nav-container">
+    <div class="logo">Arvind Kumar</div>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <div class="nav-links" id="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#impact">Impact</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
   </div>
 </nav>
 
@@ -211,9 +283,7 @@ footer{
   <div class="container">
     <h1>Senior Android Engineer</h1>
     <p>6+ Years Experience | 25M+ Users | Performance & Architecture Focused</p>
-    <a href="Arvind_Kumar_Android_Developer_6Yrs.pdf" class="btn" download>
-      Download Resume
-    </a>
+    <a href="Arvind_Kumar_Android_Developer_6Yrs.pdf" class="btn" download>Download Resume</a>
   </div>
 </section>
 
@@ -223,8 +293,7 @@ footer{
     <h2>Professional Summary</h2>
     <div class="card">
       Senior Android Developer with 6+ years of experience building scalable production applications.
-      Currently contributing to EaseMyTrip (25M+ users), improving performance, reducing crashes,
-      and implementing Clean Architecture using Kotlin and MVVM.
+      Currently contributing to EaseMyTrip (25M+ users), improving performance and implementing Clean Architecture using Kotlin and MVVM.
     </div>
   </div>
 </section>
@@ -233,88 +302,71 @@ footer{
 <section id="impact">
   <div class="container">
     <h2>Career Impact</h2>
-    <div class="grid">
-      <div class="card">
-        <strong>25M+ Users</strong>
-        <p>Working on large-scale travel platform at EaseMyTrip.</p>
-      </div>
-      <div class="card">
-        <strong>20% Faster Performance</strong>
-        <p>Optimized booking flow by reducing redundant API calls.</p>
-      </div>
-      <div class="card">
-        <strong>Crash & ANR Reduction</strong>
-        <p>Improved stability using Firebase Crashlytics & monitoring tools.</p>
-      </div>
-      <div class="card">
-        <strong>40K+ Downloads</strong>
-        <p>Built Android application from scratch and scaled successfully.</p>
-      </div>
+    <div class="projects-grid">
+      <div class="card"><strong>25M+ Users</strong></div>
+      <div class="card"><strong>20% Faster Performance</strong></div>
+      <div class="card"><strong>Crash Reduction</strong></div>
+      <div class="card"><strong>40K+ Downloads</strong></div>
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
+<!-- PROJECTS -->
 <section id="projects">
   <div class="container">
     <h2>Live Projects</h2>
-    <div class="grid">
 
-      <div class="card">
-        <strong>EaseMyTrip</strong>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <h3>EaseMyTrip</h3>
         <p>Large-scale travel app serving 25M+ users.</p>
-        <a href="https://play.google.com/store/apps/details?id=com.easemytrip.android" target="_blank">View App</a>
+        <a href="https://play.google.com/store/apps/details?id=com.easemytrip.android" target="_blank" class="project-btn">View App</a>
       </div>
 
-      <div class="card">
-        <strong>Fision (Hotwire)</strong>
-        <a href="https://play.google.com/store/apps/details?id=com.hotwirecommunications.fision" target="_blank">View App</a>
+      <div class="project-card">
+        <h3>Fision (Hotwire)</h3>
+        <p>Consumer connectivity platform application.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.hotwirecommunications.fision" target="_blank" class="project-btn">View App</a>
       </div>
 
-      <div class="card">
-        <strong>Flipspot</strong>
-        <a href="https://play.google.com/store/apps/details?id=com.flipspot" target="_blank">View App</a>
+      <div class="project-card">
+        <h3>Flipspot</h3>
+        <p>Marketplace application with scalable backend integration.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.flipspot" target="_blank" class="project-btn">View App</a>
       </div>
 
-      <div class="card">
-        <strong>Royal Botanica</strong>
-        <a href="https://play.google.com/store/apps/details?id=royalbotanica.in" target="_blank">View App</a>
+      <div class="project-card">
+        <h3>Royal Botanica</h3>
+        <p>E-commerce application with payment integration.</p>
+        <a href="https://play.google.com/store/apps/details?id=royalbotanica.in" target="_blank" class="project-btn">View App</a>
       </div>
 
-      <div class="card">
-        <strong>Just Opal</strong>
-        <a href="https://play.google.com/store/apps/details?id=justopal.com.au" target="_blank">View App</a>
+      <div class="project-card">
+        <h3>Just Opal</h3>
+        <p>Retail application with optimized user experience.</p>
+        <a href="https://play.google.com/store/apps/details?id=justopal.com.au" target="_blank" class="project-btn">View App</a>
       </div>
 
-      <div class="card">
-        <strong>The Thirty Three</strong>
-        <a href="https://play.google.com/store/apps/details?id=thethirtythree.in" target="_blank">View App</a>
+      <div class="project-card">
+        <h3>The Thirty Three</h3>
+        <p>Restaurant & lifestyle Android application.</p>
+        <a href="https://play.google.com/store/apps/details?id=thethirtythree.in" target="_blank" class="project-btn">View App</a>
       </div>
 
     </div>
   </div>
 </section>
 
+
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="container">
     <h2>Experience</h2>
-
-    <div class="card">
-      <strong>EaseMyTrip — Android Engineer (Dec 2023 – Present)</strong>
-      <p>Working across Flights, Hotels, Cab & Metro modules using Kotlin, MVVM & Clean Architecture.</p>
-    </div>
-
-    <div class="card">
-      <strong>Chetu Inc. — Android Engineer (May 2022 – Oct 2023)</strong>
-      <p>Built scalable Android app from scratch using MVVM, Room & modular architecture.</p>
-    </div>
-
-    <div class="card">
-      <strong>Onqanet Technologies — Android Developer (2019 – 2022)</strong>
-      <p>Maintained live apps with 25K+ active users and handled Play Store releases.</p>
-    </div>
-
+    <div class="card"><strong>EaseMyTrip — Android Engineer</strong></div>
+    <div class="card"><strong>Chetu Inc. — Android Engineer</strong></div>
+    <div class="card"><strong>Onqanet Technologies — Android Developer</strong></div>
   </div>
 </section>
 
@@ -322,24 +374,10 @@ footer{
 <section id="contact">
   <div class="container">
     <h2>Contact</h2>
-
     <div class="contact-card">
-
-      <a href="mailto:arvindlink05@gmail.com" class="contact-item">
-        <span class="icon">📧</span>
-        <span>arvindlink05@gmail.com</span>
-      </a>
-
-      <a href="https://www.linkedin.com/in/kumar-arvind/" target="_blank" class="contact-item">
-        <span class="icon">🔗</span>
-        <span>LinkedIn Profile</span>
-      </a>
-
-      <a href="https://github.com/ak010cse" target="_blank" class="contact-item">
-        <span class="icon">💻</span>
-        <span>GitHub Profile</span>
-      </a>
-
+      <a href="mailto:arvindlink05@gmail.com" class="contact-item">📧 arvindlink05@gmail.com</a>
+      <a href="https://www.linkedin.com/in/kumar-arvind/" target="_blank" class="contact-item">🔗 LinkedIn</a>
+      <a href="https://github.com/ak010cse" target="_blank" class="contact-item">💻 GitHub</a>
     </div>
   </div>
 </section>
@@ -347,6 +385,15 @@ footer{
 <footer>
   © 2026 Arvind Kumar | Senior Android Engineer
 </footer>
+
+<script>
+const toggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+</script>
 
 </body>
 </html>
