@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arvind Kumar | Elite Mobile Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --primary:#22c55e;
+  --bg:#0f172a;
+  --card:#1e293b;
+  --text:#ffffff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  background:rgba(15,23,42,0.8);
+  backdrop-filter:blur(10px);
+  padding:15px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+}
+
+nav a{
+  color:var(--text);
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:var(--primary);
+}
+
+section{
+  padding:100px 10%;
+  min-height:100vh;
+}
+
+h1{
+  font-size:50px;
+}
+
+.highlight{
+  color:var(--primary);
+}
+
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 30px;
+  background:var(--primary);
+  color:#000;
+  border-radius:30px;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+}
+
+/* Cards */
+.card{
+  background:var(--card);
+  padding:25px;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.grid{
+  display:grid;
+  gap:25px;
+}
+
+.grid-3{
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+}
+
+/* Skills */
+.skill{
+  margin-bottom:20px;
+}
+
+.progress{
+  background:#334155;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.bar{
+  height:10px;
+  width:0;
+  background:var(--primary);
+  transition:2s ease;
+}
+
+/* Fade animation */
+.fade{
+  opacity:0;
+  transform:translateY(30px);
+  transition:1s;
+}
+
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Responsive */
+@media(max-width:768px){
+  h1{font-size:32px;}
+  nav{padding:15px 5%;}
+  section{padding:80px 5%;}
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div><strong>Arvind Kumar</strong></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="fade">
+  <h1>Hi, I'm <span class="highlight">Arvind Kumar</span></h1>
+  <h2 id="typing"></h2>
+  <a href="resume.pdf" class="btn" download>Download Resume</a>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="fade">
+  <h2 class="highlight">About Me</h2>
+  <div class="card">
+    6.7+ years experienced Mobile Developer specializing in Android (Kotlin, Jetpack, MVVM) and iOS (Swift).
+    Delivered production-level apps with millions of downloads and enterprise-grade architecture.
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="fade">
+  <h2 class="highlight">Technical Skills</h2>
+
+  <div class="skill">
+    Android / Kotlin
+    <div class="progress"><div class="bar" data-width="90%"></div></div>
+  </div>
+
+  <div class="skill">
+    Jetpack Compose
+    <div class="progress"><div class="bar" data-width="85%"></div></div>
+  </div>
+
+  <div class="skill">
+    MVVM / Clean Architecture
+    <div class="progress"><div class="bar" data-width="88%"></div></div>
+  </div>
+
+  <div class="skill">
+    iOS / Swift
+    <div class="progress"><div class="bar" data-width="80%"></div></div>
+  </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="fade">
+  <h2 class="highlight">Live Production Apps</h2>
+
+  <div class="grid grid-3">
+
+    <div class="card">
+      <h3>EaseMyTrip</h3>
+      <a href="https://play.google.com/store/apps/details?id=com.easemytrip.android" target="_blank">View App</a>
+    </div>
+
+    <div class="card">
+      <h3>Fision</h3>
+      <a href="https://play.google.com/store/apps/details?id=com.hotwirecommunications.fision" target="_blank">View App</a>
+    </div>
+
+    <div class="card">
+      <h3>Flipspot</h3>
+      <a href="https://play.google.com/store/apps/details?id=com.flipspot" target="_blank">View App</a>
+    </div>
+
+    <div class="card">
+      <h3>Royal Botanica</h3>
+      <a href="https://play.google.com/store/apps/details?id=royalbotanica.in" target="_blank">View App</a>
+    </div>
+
+    <div class="card">
+      <h3>Just Opal</h3>
+      <a href="https://play.google.com/store/apps/details?id=justopal.com.au" target="_blank">View App</a>
+    </div>
+
+    <div class="card">
+      <h3>The Thirty Three</h3>
+      <a href="https://play.google.com/store/apps/details?id=thethirtythree.in" target="_blank">View App</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="fade">
+  <h2 class="highlight">Let's Connect</h2>
+  <div class="card">
+    📧 your-email@gmail.com <br><br>
+    🔗 LinkedIn <br>
+    🔗 GitHub
+  </div>
+</section>
+
+<script>
+
+/* Typing Effect */
+const text = ["Senior Android Developer", "iOS Developer", "MVVM & Clean Architecture Expert"];
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+(function type(){
+  if(count === text.length) count = 0;
+  currentText = text[count];
+  letter = currentText.slice(0, ++index);
+  document.getElementById("typing").textContent = letter;
+  if(letter.length === currentText.length){
+    count++;
+    index = 0;
+    setTimeout(type, 1500);
+  } else {
+    setTimeout(type, 80);
+  }
+})();
+
+/* Fade + Skill Animation */
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+      if(entry.target.id === "skills"){
+        document.querySelectorAll(".bar").forEach(bar=>{
+          bar.style.width = bar.dataset.width;
+        });
+      }
+    }
+  });
+});
+
+document.querySelectorAll(".fade").forEach(el=>observer.observe(el));
+
+</script>
+
+</body>
+</html>
