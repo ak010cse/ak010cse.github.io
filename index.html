@@ -154,7 +154,36 @@ footer{
   }
 
 }
+.contact-card{
+  background:var(--card);
+  padding:25px;
+  border-radius:12px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  max-width:500px;
+}
 
+.contact-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:var(--text);
+  font-size:15px;
+  padding:10px 12px;
+  border-radius:8px;
+  transition:0.3s ease;
+}
+
+.contact-item:hover{
+  background:rgba(34,197,94,0.1);
+  color:var(--primary);
+}
+
+.icon{
+  font-size:18px;
+}
 </style>
 </head>
 
@@ -293,10 +322,24 @@ footer{
 <section id="contact">
   <div class="container">
     <h2>Contact</h2>
-    <div class="card">
-      📧 <a href="mailto:arvindlink05@gmail.com">arvindlink05@gmail.com</a><br><br>
-      🔗 <a href="https://www.linkedin.com/in/kumar-arvind/" target="_blank">LinkedIn</a><br>
-      🔗 <a href="https://github.com/ak010cse" target="_blank">GitHub</a>
+
+    <div class="contact-card">
+
+      <a href="mailto:arvindlink05@gmail.com" class="contact-item">
+        <span class="icon">📧</span>
+        <span>arvindlink05@gmail.com</span>
+      </a>
+
+      <a href="https://www.linkedin.com/in/kumar-arvind/" target="_blank" class="contact-item">
+        <span class="icon">🔗</span>
+        <span>LinkedIn Profile</span>
+      </a>
+
+      <a href="https://github.com/ak010cse" target="_blank" class="contact-item">
+        <span class="icon">💻</span>
+        <span>GitHub Profile</span>
+      </a>
+
     </div>
   </div>
 </section>
