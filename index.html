@@ -1,560 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arvind Kumar | Senior Android Engineer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arvind Kumar | Senior Android Engineer</title>
 
-    <meta name="description" content="Senior Android Engineer with 6+ years experience. Worked on 25M+ user app at EaseMyTrip. Expert in Kotlin, MVVM, Clean Architecture.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
 
-    <style>
-        :root {
-            --primary: #22c55e;
-            --bg: #0f172a;
-            --card: #1e293b;
-            --text: #ffffff;
-        }
+:root{
+    --primary:#22c55e;
+    --bg:#0f172a;
+    --card:#1e293b;
+    --text:#ffffff;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+.light-mode{
+    --bg:#f5f7fa;
+    --card:#ffffff;
+    --text:#111;
+}
 
-        body {
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
-        .container {
-            width: 90%;
-            max-width: 1000px;
-            margin: auto;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+body{
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+}
 
-        /* ================= NAVBAR ================= */
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
 
-        nav {
-            background: var(--card);
-            padding: 14px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            transition: 0.3s ease;
-        }
+/* ================= NAVBAR ================= */
 
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+nav{
+    background:var(--card);
+    padding:15px 0;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
 
-        .logo {
-            font-weight: 600;
-            color: var(--text);
-        }
+.nav-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 
-        .nav-links a {
-            color: var(--text);
-            text-decoration: none;
-            font-size: 14px;
-            transition: 0.3s;
-        }
+.logo{
+    font-weight:600;
+    color:var(--text);
+    text-decoration:none;
+    font-size:16px;
+}
 
-        .nav-links a:hover {
-            color: var(--primary);
-        }
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
 
-        .menu-toggle {
-            color: var(--text);
-        }
+.nav-links{
+    display:flex;
+    gap:20px;
+}
 
+.nav-links a{
+    color:var(--text);
+    text-decoration:none;
+    font-size:14px;
+    transition:0.3s;
+}
 
-        .light-mode {
-            --bg: #f5f7fa;
-            --text: #111;
-            --card: #ffffff;
-            --primary: #22c55e;
-        }
+.nav-links a:hover{
+    color:var(--primary);
+}
 
-        .light-mode nav {
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
+.theme-btn{
+    background:none;
+    border:none;
+    font-size:18px;
+    cursor:pointer;
+    color:var(--text);
+}
 
-        open-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin: 15px 0 10px 0;
-            padding: 8px 18px;
-            background: rgba(34, 197, 94, 0.15);
-            color: var(--primary);
-            border-radius: 25px;
-            font-size: 14px;
-            font-weight: 500;
-            animation: pulse 2s infinite;
-        }
+.menu-toggle{
+    display:none;
+    font-size:20px;
+    cursor:pointer;
+    color:var(--text);
+}
 
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
-            }
+/* ================= SECTIONS ================= */
 
-            70% {
-                box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
-            }
+section{
+    padding:60px 0;
+}
 
-            100% {
-                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
-            }
-        }
+.hero{
+    padding:80px 0 50px 0;
+}
 
-        /* ================= SECTIONS ================= */
+h1{
+    font-size:40px;
+    margin-bottom:10px;
+}
 
-        section {
-            padding: 50px 0;
-        }
+h2{
+    font-size:22px;
+    margin-bottom:20px;
+    color:var(--primary);
+}
 
-        .hero {
-            padding: 60px 0 40px 0;
-        }
+.card{
+    background:var(--card);
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:20px;
+}
 
-        h1 {
-            font-size: 36px;
-            margin-bottom: 8px;
-        }
+.btn{
+    display:inline-block;
+    padding:10px 25px;
+    background:var(--primary);
+    color:white;
+    border-radius:25px;
+    text-decoration:none;
+    margin-top:20px;
+    font-weight:600;
+    font-size:14px;
+}
 
-        h2 {
-            font-size: 22px;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
+/* ================= GRID ================= */
 
-        p {
-            font-size: 14px;
-        }
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
 
-        /* ================= BUTTON ================= */
+.project-card{
+    background:var(--card);
+    padding:20px;
+    border-radius:12px;
+    transition:0.3s;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 9px 20px;
-            background: var(--primary);
-            color: white;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 15px;
-            font-size: 13px;
-            transition: 0.3s;
-        }
+.project-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 4px 20px rgba(34,197,94,0.2);
+}
 
-        .btn:hover {
-            background: #1faa52;
-        }
+.project-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:6px 15px;
+    background:var(--primary);
+    color:white;
+    text-decoration:none;
+    border-radius:20px;
+    font-size:12px;
+}
 
-        /* ================= CARD ================= */
+/* ================= FOOTER ================= */
 
-        .card {
-            background: var(--card);
-            padding: 18px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
+footer{
+    text-align:center;
+    padding:20px;
+    background:var(--card);
+    font-size:13px;
+}
 
-        /* ================= PROJECTS ================= */
+/* ================= MOBILE ================= */
 
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+@media(max-width:768px){
 
-        .project-card {
-            background: var(--card);
-            padding: 20px;
-            border-radius: 12px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 170px;
-            transition: 0.3s ease;
-        }
+.nav-links{
+    position:absolute;
+    top:65px;
+    right:0;
+    width:100%;
+    background:var(--card);
+    flex-direction:column;
+    align-items:center;
+    padding:20px 0;
+    display:none;
+}
 
-        .project-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.15);
-        }
+.nav-links.active{
+    display:flex;
+}
 
-        .project-card h3 {
-            margin-bottom: 8px;
-        }
+.menu-toggle{
+    display:block;
+}
 
-        .project-card p {
-            margin-bottom: 15px;
-            font-size: 13px;
-        }
+}
 
-        .project-btn {
-            align-self: flex-start;
-            padding: 6px 14px;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            font-size: 12px;
-            border-radius: 20px;
-            font-weight: 600;
-        }
-
-        .featured {
-            border: 1px solid var(--primary);
-            position: relative;
-        }
-
-        .featured-badge {
-            position: absolute;
-            top: -10px;
-            right: 15px;
-            background: var(--primary);
-            color: white;
-            font-size: 11px;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-weight: 600;
-        }
-
-        /* ================= CONTACT ================= */
-
-        .contact-card {
-            background: var(--card);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 25px;
-            border-radius: 16px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            max-width: 450px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: var(--text);
-            padding: 8px 10px;
-            border-radius: 8px;
-            transition: 0.3s;
-            font-size: 14px;
-        }
-
-        .contact-item:hover {
-            background: rgba(34, 197, 94, 0.1);
-            color: var(--primary);
-        }
-
-        .map-container {
-            margin-top: 20px;
-            padding: 0 10px;
-        }
-
-
-        .map-container iframe {
-            border-radius: 12px;
-            box-shadow: 0 0 25px rgba(34, 197, 94, 0.15);
-            transition: 0.4s ease;
-        }
-
-        .map-container iframe:hover {
-            box-shadow: 0 0 35px rgba(34, 197, 94, 0.3);
-        }
-
-        /* ================= FOOTER ================= */
-
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: var(--card);
-            font-size: 12px;
-        }
-
-        /* ================= MOBILE ================= */
-
-        @media(max-width:768px) {
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .nav-links {
-                position: absolute;
-                top: 60px;
-                right: 0;
-                width: 100%;
-                background: var(--card);
-                flex-direction: column;
-                align-items: center;
-                padding: 20px 0;
-                display: none;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .nav-links a {
-                padding: 10px 0;
-            }
-
-            h1 {
-                font-size: 24px;
-            }
-
-            section {
-                padding: 40px 0;
-            }
-
-            .hero {
-                padding: 40px 0 30px 0;
-            }
-
-        }
-    </style>
+</style>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <div class="container nav-container">
-            <a href="#home" class="logo">Arvind Kumar</a>
-            <button id="theme-toggle" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;">🌙</button>
+<!-- NAVBAR -->
+<nav>
+<div class="container nav-container">
 
-            <div class="menu-toggle" id="menu-toggle">☰</div>
+<a href="#home" class="logo">Arvind Kumar</a>
 
-            <div class="nav-links" id="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#impact">Impact</a>
-                <a href="#projects">Projects</a>
-                <a href="#experience">Experience</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-    </nav>
+<div class="nav-right">
+<div class="nav-links" id="nav-links">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#impact">Impact</a>
+<a href="#projects">Projects</a>
+<a href="#experience">Experience</a>
+<a href="#contact">Contact</a>
+</div>
 
-    <!-- HERO -->
-    <section class="hero" id="home">
+<button id="theme-toggle" class="theme-btn">🌙</button>
+<div class="menu-toggle" id="menu-toggle">☰</div>
+</div>
 
-        <div class="container">
-            <h1>Senior Android Engineer</h1>
-            <p>6+ Years Experience | 25M+ Users | Performance & Architecture Focused</p>
-            <a href="Arvind_Kumar_Android_Developer_6Yrs.pdf" class="btn" download>Download Resume</a>
-        </div>
-    </section>
+</div>
+</nav>
 
-    <!-- ABOUT -->
-    <section id="about">
-        <div class="container">
-            <h2>Professional Summary</h2>
-            <div class="card">
-                Senior Android Developer with 6+ years of experience building scalable production applications.
-                Currently contributing to EaseMyTrip (25M+ users), improving performance and implementing Clean Architecture using Kotlin and MVVM.
-            </div>
-        </div>
-    </section>
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="container">
+<h1>Senior Android Engineer</h1>
+<p>6+ Years Experience | 25M+ Users | Performance & Architecture Focused</p>
+<a href="#" class="btn">Download Resume</a>
+</div>
+</section>
 
-    <!-- IMPACT -->
-    <section id="impact">
-        <div class="container">
-            <h2>Career Impact</h2>
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+<h2>Professional Summary</h2>
+<div class="card">
+Senior Android Developer with 6+ years of experience building scalable production applications. Currently contributing to EaseMyTrip (25M+ users).
+</div>
+</div>
+</section>
 
-            <div class="projects-grid">
+<!-- PROJECTS -->
+<section id="projects">
+<div class="container">
+<h2>Live Projects</h2>
 
-                <div class="card">
-                    <h3><span class="counter" data-target="25">0</span>M+</h3>
-                    <p>Users served at EaseMyTrip</p>
-                </div>
+<div class="projects-grid">
 
-                <div class="card">
-                    <h3><span class="counter" data-target="40">0</span>K+</h3>
-                    <p>App downloads built from scratch</p>
-                </div>
+<div class="project-card">
+<h3>EaseMyTrip</h3>
+<p>Large-scale travel application serving 25M+ users.</p>
+<a href="#" class="project-btn">View App</a>
+</div>
 
-                <div class="card">
-                    <h3>20%</h3>
-                    <p>Booking flow performance improvement</p>
-                </div>
+<div class="project-card">
+<h3>Flipspot</h3>
+<p>Marketplace application with scalable backend integration.</p>
+<a href="#" class="project-btn">View App</a>
+</div>
 
-            </div>
-        </div>
-    </section>
+</div>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-        <div class="container">
-            <h2>Live Projects</h2>
+</div>
+</section>
 
-            <div class="projects-grid">
+<footer>
+© 2026 Arvind Kumar | Senior Android Engineer
+</footer>
 
-                <div class="project-card featured">
-                    <span class="featured-badge">Featured Project</span>
-                    <h3>EaseMyTrip</h3>
-                    <p>Large-scale travel application serving 25M+ users. Worked on booking performance optimization, crash reduction and modular architecture improvements.</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.easemytrip.android" target="_blank" class="project-btn">View App</a>
-                </div>
+<script>
 
-                <div class="project-card">
-                    <h3>Fision (Hotwire)</h3>
-                    <p>Consumer connectivity platform application.</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.hotwirecommunications.fision" target="_blank" class="project-btn">View App</a>
-                </div>
+const menuToggle=document.getElementById('menu-toggle');
+const navLinks=document.getElementById('nav-links');
+const themeToggle=document.getElementById('theme-toggle');
 
-                <div class="project-card">
-                    <h3>Flipspot</h3>
-                    <p>Marketplace application with scalable backend integration.</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.flipspot" target="_blank" class="project-btn">View App</a>
-                </div>
+menuToggle.addEventListener('click',()=>{
+navLinks.classList.toggle('active');
+});
 
-                <div class="project-card">
-                    <h3>Royal Botanica</h3>
-                    <p>E-commerce application with payment integration.</p>
-                    <a href="https://play.google.com/store/apps/details?id=royalbotanica.in" target="_blank" class="project-btn">View App</a>
-                </div>
+themeToggle.addEventListener('click',()=>{
+document.body.classList.toggle('light-mode');
+themeToggle.textContent=
+document.body.classList.contains('light-mode') ? "☀️":"🌙";
+});
 
-                <div class="project-card">
-                    <h3>Just Opal</h3>
-                    <p>Retail application with optimized user experience.</p>
-                    <a href="https://play.google.com/store/apps/details?id=justopal.com.au" target="_blank" class="project-btn">View App</a>
-                </div>
-
-                <div class="project-card">
-                    <h3>The Thirty Three</h3>
-                    <p>Restaurant & lifestyle Android application.</p>
-                    <a href="https://play.google.com/store/apps/details?id=thethirtythree.in" target="_blank" class="project-btn">View App</a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- EXPERIENCE -->
-    <section id="experience">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="card"><strong>EaseMyTrip — Android Engineer</strong></div>
-            <div class="card"><strong>Chetu Inc. — Android Engineer</strong></div>
-            <div class="card"><strong>Onqanet Technologies — Android Developer</strong></div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <div class="contact-card">
-                <a href="mailto:arvindlink05@gmail.com" class="contact-item">
-                    📧 arvindlink05@gmail.com
-                </a>
-                <a href="https://www.linkedin.com/in/kumar-arvind/" target="_blank" class="contact-item">🔗 LinkedIn</a>
-                <a href="https://github.com/ak010cse" target="_blank" class="contact-item">💻 GitHub</a>
-
-                <a href="https://www.google.com/maps?q=28.6280,77.3649" target="_blank" class="contact-item">
-                    📍 Noida, India
-                </a>
-            </div>
-        </div>
-
-    </section>
-    <div class="map-container reveal">
-        <iframe src="https://maps.google.com/maps?q=28.6280,77.3649&z=13&output=embed" width="100%" height="250" style="border:0; border-radius:12px;" loading="lazy">
-        </iframe>
-    </div>
-
-
-    <footer>
-        © 2026 Arvind Kumar | Senior Android Engineer
-    </footer>
-
-    <script>
-        const toggle = document.getElementById('menu-toggle');
-        const navLinks = document.getElementById('nav-links');
-        const links = document.querySelectorAll('.nav-links a');
-
-        toggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        /* 🔥 Close menu after clicking a link (mobile fix) */
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
-        /* 🔥 Reveal animation on scroll */
-        const reveals = document.querySelectorAll('.reveal');
-
-        window.addEventListener('scroll', () => {
-            reveals.forEach(el => {
-                const windowHeight = window.innerHeight;
-                const revealTop = el.getBoundingClientRect().top;
-                const revealPoint = 100;
-
-                if (revealTop < windowHeight - revealPoint) {
-                    el.classList.add('active');
-                }
-            });
-        });
-
-        const counters = document.querySelectorAll('.counter');
-
-        const runCounter = () => {
-            counters.forEach(counter => {
-                const updateCount = () => {
-                    const target = +counter.getAttribute('data-target');
-                    const count = +counter.innerText;
-                    const increment = target / 80;
-
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count + increment);
-                        setTimeout(updateCount, 25);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-                updateCount();
-            });
-        };
-
-        window.addEventListener('scroll', runCounter, {
-            once: true
-        });
-
-        const themeToggle = document.getElementById('theme-toggle');
-
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('light-mode');
-
-            if (document.body.classList.contains('light-mode')) {
-                themeToggle.textContent = "☀️";
-            } else {
-                themeToggle.textContent = "🌙";
-            }
-        });
-    </script>
+</script>
 
 </body>
-
 </html>
